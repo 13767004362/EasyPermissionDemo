@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     @Override
     public void onPermissionsGranted(int requestCode, List<String> perms) {
         ToastUtils.showToast(getApplicationContext(), "用户授权成功");
+
     }
     /**
      * 请求权限失败
@@ -197,7 +198,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
 
     @Override
     public void photoAlbum() {
-        CameraUtils.openGallery(this, Constance.GALLERY_CODE);
+
+            CameraUtils.openGallery(this, Constance.GALLERY_CODE);
     }
 
     /**

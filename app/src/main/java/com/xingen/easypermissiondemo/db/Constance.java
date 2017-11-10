@@ -17,7 +17,6 @@ public final class Constance {
     public final static  int WRITE_PERMISSION_CODE=110;
     public final static  String WRITE_PERMISSION_TIP ="为了正常使用，请允许读写权限!";
     public final  static String[] PERMS_WRITE ={Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
     /**
      * 相机，图库的请求code
      */
