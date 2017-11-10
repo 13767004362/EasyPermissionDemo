@@ -8,6 +8,8 @@ import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static android.os.Environment.DIRECTORY_PICTURES;
+
 /**
  * Created by ${xingen} on 2017/11/1.
  * blog: http://blog.csdn.net/hexingen
@@ -25,9 +27,9 @@ public class FileUtils {
     public static String getBitmapDiskFile(Context context) {
         String cachePath;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) || !Environment.isExternalStorageRemovable()) {
-            cachePath = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES).getPath();
+            cachePath = context.getExternalFilesDir(DIRECTORY_PICTURES).getAbsolutePath();
         } else {
-            cachePath = context.getFilesDir().getPath();
+            cachePath =context.getFilesDir().getAbsolutePath();
         }
         return new File(cachePath +File.separator+ getBitmapFileName()).getAbsolutePath();
     }

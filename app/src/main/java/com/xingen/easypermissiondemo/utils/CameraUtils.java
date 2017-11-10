@@ -35,7 +35,10 @@ public class CameraUtils {
     public static void openCamera(Activity context, int requestCode, String picturePath){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (intent.resolveActivity(context.getPackageManager()) != null) {
-            //指定拍照存储路径
+            /**
+             * 指定拍照存储路径
+             * 7.0 及其以上使用FileProvider替换'file://'访问
+             */
             if (Build.VERSION.SDK_INT>=24){
                 //这里的BuildConfig，需要是程序包下BuildConfig。
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(context.getApplicationContext(), BuildConfig.APPLICATION_ID+".provider",new File(picturePath)));
