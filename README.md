@@ -19,3 +19,5 @@
 - 跳转其他程序，Activity被系统因内存不足回收，处理数据保存问题。
 
 更多详情，请阅读[Android 拍照和图库功能（适配Android 6.0和7.0系统和华为机型问题）](http://blog.csdn.net/hexingen/article/details/78516755)
+
+根据以上功能模块封装一个类库，详情尽在[PhotoCrop库](https://github.com/13767004362/PhotoCrop)
